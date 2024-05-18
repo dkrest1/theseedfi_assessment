@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+
+# Package-lock files (choose one)
+package-lock.json
+
+# Build output
+build/
+
+# Logs
+*.log
+
+# Optional cache directories
+.npm          
+
+
+# Dotenv for local development
+.env
