@@ -2,19 +2,28 @@
 
 ## Description
 
-    ```html
-    <div>
-        This task demonstrate saving a numerical value (currency) with controlled precision <br> to a PostgreSQL database using Node.js without data loss. This example will utilize native functionalities and avoid external frameworks like Express and ORM Libraries like TypeORM.
-    </div>
-    ```
+    <p>This task demonstrate saving a numerical value (currency) with controlled precision to a PostgreSQL database using Node.js without data loss. This example will utilize native functionalities and avoid external frameworks like Express and ORM Libraries like TypeORM.</p>
 
 ## Research and Explanation to the Question Asked in Interview
 
-    ```html
-    <div style="overflow-x: hidden;">
-        Answer: To save a floating-point value with 4 decimal places, such as 2053.0005, in a PostgreSQL database without losing precision, you can use the `NUMERIC` or `DECIMAL` data type. These types are designed to store exact numeric values and are ideal for financial applications where precision is critical. Also we can also handle it as a `string`, it's main by preference, this also prevent value from rounding up
-    </div>
-    ```
+    <p>Answer: To save a floating-point value with 4 decimal places, such as 2053.0005, in a PostgreSQL database without losing precision<p> 
+
+    **Recommended Approach: Using `NUMERIC` or `DECIMAL` Data Types**
+
+For financial applications or scenarios where precision is paramount, the preferred data types are `NUMERIC` and `DECIMAL`. These types offer:
+
+- **Exact Storage:** They represent numbers precisely, avoiding rounding errors that can occur with floating-point data types.
+- **Scalability:** They support a configurable number of decimal places, allowing you to tailor precision to your specific needs.
+
+**Example Usage:**
+
+```sql
+CREATE TABLE transactions (
+  id SERIAL PRIMARY KEY,
+  amount NUMERIC(10, 4) NOT NULL -- 10 total digits (including potential sign), 4 decimal places
+);
+```
+<p>Also we can also handle it as a `string`, it's main by preference, this also prevent value from rounding up</p>
 
 ## Features
 
