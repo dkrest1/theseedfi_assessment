@@ -79,6 +79,7 @@ source .env
 3. Start the Server
   
 ```bash
+$ npm install 
 $ npm run dev
 ```
 
