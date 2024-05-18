@@ -2,13 +2,16 @@
 
 ## Description
 
-    <p>This task demonstrate saving a numerical value (currency) with controlled precision to a PostgreSQL database using Node.js without data loss. This example will utilize native functionalities and avoid external frameworks like Express and ORM Libraries like TypeORM.</p>
+This task demonstrate saving a numerical value (currency) with controlled precision 
+to a PostgreSQL database using Node.js without data loss. This example will utilize native functionalities
+and avoid external frameworks like Express and ORM Libraries like TypeORM.</p>
 
-## Research and Explanation to the Question Asked in Interview
+## Research and Explanation to the Question Asked in The Interview
 
-    <p>Answer: To save a floating-point value with 4 decimal places, such as 2053.0005, in a PostgreSQL database without losing precision<p> 
+**Answer:** : To save a floating-point value with 4 decimal places, such as 2053.0005, 
+in a PostgreSQL database without losing precision 
 
-    **Recommended Approach: Using `NUMERIC` or `DECIMAL` Data Types**
+**Recommended Approach: Using `NUMERIC`, `DECIMAL` or `STRING` Data Types** 
 
 For financial applications or scenarios where precision is paramount, the preferred data types are `NUMERIC` and `DECIMAL`. These types offer:
 
@@ -23,7 +26,7 @@ CREATE TABLE transactions (
   amount NUMERIC(10, 4) NOT NULL -- 10 total digits (including potential sign), 4 decimal places
 );
 ```
-<p>Also we can also handle it as a `string`, it's main by preference, this also prevent value from rounding up</p>
+Also we can also handle it as a `string`, it's main by preference, this also prevent value from rounding up.
 
 ## Features
 
