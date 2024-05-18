@@ -3,8 +3,8 @@
 ## Description
 
     ```html
-    <div style="overflow-x: hidden;">
-        This task demonstrate saving a numerical value (currency) with controlled precision to a PostgreSQL database using Node.js without data loss. This example will utilize native functionalities and avoid external frameworks like Express and ORM Libraries like TypeORM.
+    <div>
+        This task demonstrate saving a numerical value (currency) with controlled precision <br> to a PostgreSQL database using Node.js without data loss. This example will utilize native functionalities and avoid external frameworks like Express and ORM Libraries like TypeORM.
     </div>
     ```
 
