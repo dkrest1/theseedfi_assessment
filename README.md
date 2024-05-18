@@ -8,7 +8,7 @@ and avoid external frameworks like Express and ORM Libraries like TypeORM.</p>
 
 ## Research and Explanation to the Question Asked in The Interview
 
-**Answer:** : To save a floating-point value with 4 decimal places, such as 2053.0005, 
+**Answer:** To save a floating-point value with 4 decimal places, such as 2053.0005, 
 in a PostgreSQL database without losing precision 
 
 **Recommended Approach: Using `NUMERIC`, `DECIMAL` or `STRING` Data Types** 
@@ -26,7 +26,7 @@ CREATE TABLE transactions (
   amount NUMERIC(10, 4) NOT NULL -- 10 total digits (including potential sign), 4 decimal places
 );
 ```
-Also we can also handle it as a `string`, it's main by preference, this also prevent value from rounding up.
+**Alternative** we can also handle it as a `string`, it's main by preference, this also prevent value from rounding up.
 
 ## Features
 
