@@ -30,8 +30,14 @@ CREATE TABLE transactions (
 
 ## Features
 
-- NodeJs
-- pg (PostgreSQL Package)
+- **Create a Transaction:** Endpoint to create a transaction.
+- **Get Transactions:** Endpoint to get Transactions.
+
+## Prerequisites
+
+- Node.js (20.x)
+- PostgreSQL 
+- pg package `npm i pg`
 
 ## Folder Structure
 
@@ -57,16 +63,13 @@ CREATE TABLE transactions (
     ├── package.json # NPM package file
     └── README.md # Project README
 
-## Prerequisites
-
-- Node.js (20.x)
-
 ## Getting Started
 
 1. Clone the repository:
 
 ```bash
-cd theseedfi_currency_transaction_tracker
+$ git clone repo url
+$ cd theseedfi_currency_transaction_tracker
 ```
 
 2. Create a `.env`file and put in the right credentials:
@@ -75,6 +78,7 @@ cd theseedfi_currency_transaction_tracker
 cp .env.example .env
 source .env
 ```
+**PS:** ensure you fill your .env file before starting the server
 
 3. Start the Server
   
